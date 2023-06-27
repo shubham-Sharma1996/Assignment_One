@@ -13,7 +13,6 @@ class SearchPage():
         self.driver.find_element(*self.locator.SEARCH_INPUT).send_keys('iphone 13')
         self.driver.find_element(*self.locator.SEARCH_BUTTON).click()
         self.wait.until(EC.presence_of_element_located(self.locator.RESULTS_ITEMS))
-        self.driver.save_screenshot("C:/Users/91872/Desktop/results/results.png")
         result_items = driver.find_elements(*self.locator.RESULTS_ITEMS)
         for x in result_items:
             print(x.text)
